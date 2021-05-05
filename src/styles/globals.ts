@@ -9,14 +9,32 @@ export default createGlobalStyle`
 
   html,
   body {
-    width: 100%;
-    height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    width: 100vw;
+    height: 100vh;
+
+    font-family: 'Poppins';
+
+    overflow: hidden;
+  }
+
+  :root {
+    --bg-primary: #060505;
+    --bg-secondary: #FFBF00;
+    
+    --border-sm: 5px;
+    --border-md: 10px;
+    --border-l: 15px;
+    --border-xl: 30px;
+
+    font-size: 10px;
   }
 
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  button, a {
+    cursor: pointer;
   }
 `
