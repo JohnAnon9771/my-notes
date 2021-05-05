@@ -1,0 +1,6 @@
+export {default as Time} from './TimeCircle.svg'
+export {default as Github} from './github.svg'
+export {default as Setting} from './Setting.svg'
+export {default as VolumeOn} from './VolumeDown.svg'
+export {default as VolumeOff} from './VolumeOff.svg'
+export {default as ChevronDown} from './ChevronDown.svg'
