@@ -4,7 +4,6 @@ import Link from 'next/link'
 import {Setting, Time} from 'assets/icons'
 
 import Select from './Select'
-import * as S from './style'
 
 export default function Nav(): JSX.Element {
   const router = useRouter()
@@ -13,22 +12,22 @@ export default function Nav(): JSX.Element {
   )
 
   return (
-    <S.Aside>
-      <S.Nav>
+    <aside className="relative w-64 h-full flex flex-col justify-end">
+      <nav className="navigation">
         <Link href="/">
-          <a className={classActive[0]}>
+          <a className={`navigation-item ${classActive[0] && 'active'}`}>
             <Time viewBox="0 0 24 24" height="32" width="32" />
             Rotina
           </a>
         </Link>
         <Link href="/configuration">
-          <a className={classActive[1]}>
+          <a className={`navigation-item ${classActive[1] && 'active'}`}>
             <Setting viewBox="0 0 24 24" height="32" width="32" />
             Configurações
           </a>
         </Link>
-      </S.Nav>
+      </nav>
       <Select />
-    </S.Aside>
+    </aside>
   )
 }
