@@ -7,25 +7,23 @@ export default function Select(): JSX.Element {
   const [value, setValue] = useState('Português')
 
   return (
-    <div className="flex flex-col absolute bottom-3 right-3 w-3/4 gap-2">
-      <div
-        className={`border rounded-xl select-none font-semibold p-3 gap-2 shadow-sm z-10 opacity-0 ${
-          isOpen && 'opacity-100'
-        }`}
-      >
-        <option
-          className="hover:bg-gray-100 rounded-md p-2 font-semibold"
-          onClick={e => setValue(e.currentTarget.innerText)}
-        >
-          Português
-        </option>
-        <option
-          className="hover:bg-gray-100 rounded-md p-2 font-semibold"
-          onClick={e => setValue(e.currentTarget.innerText)}
-        >
-          English
-        </option>
-      </div>
+    <div className="flex flex-col gap-3 absolute bottom-3 right-3 w-3/4">
+      {isOpen && (
+        <div className="border rounded-xl font-semibold p-3 gap-2 shadow-sm z-10">
+          <option
+            className="dropdown-item"
+            onClick={e => setValue(e.currentTarget.innerText)}
+          >
+            Português
+          </option>
+          <option
+            className="dropdown-item"
+            onClick={e => setValue(e.currentTarget.innerText)}
+          >
+            English
+          </option>
+        </div>
+      )}
       <div className="flex flex-col border-2 shadow-sm rounded-xl p-3 relative">
         <span className="absolute p-1 -top-5 left-3 font-semibold text-gray-300 bg-white">
           Idioma
