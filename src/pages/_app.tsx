@@ -12,7 +12,10 @@ export default function MyApp({Component, pageProps}: AppProps): JSX.Element {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Header />
-      <div className="flex w-screen" style={{height: 'calc(100vh - 88px)'}}>
+      <div
+        className="flex flex-col md:flex-row p-5 lg:p-0 leading-loose w-screen gap-8"
+        style={{height: 'calc(100vh - 94px)'}}
+      >
         <Aside />
         <Component {...pageProps} />
       </div>

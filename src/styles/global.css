@@ -7,11 +7,10 @@
   }
 
   .dropdown-item {
-    @apply hover:bg-gray-100 rounded-md p-2 font-semibold;
+    @apply hover:bg-gray-100 rounded-md p-2 font-semibold cursor-pointer;
   }
 }
 
-@tailwind screens;
 @tailwind utilities;
 
 .active {

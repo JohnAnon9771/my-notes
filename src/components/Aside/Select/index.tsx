@@ -24,7 +24,7 @@ export default function Select(): JSX.Element {
           </option>
         </div>
       )}
-      <div className="flex flex-col border-2 shadow-sm rounded-xl p-3 relative">
+      <div className="flex border-2 shadow-sm rounded-xl p-3 items-center relative">
         <span className="absolute p-1 -top-5 left-3 font-semibold text-gray-300 bg-white">
           Idioma
         </span>

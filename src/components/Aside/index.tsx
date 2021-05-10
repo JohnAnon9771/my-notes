@@ -12,7 +12,7 @@ export default function Aside(): JSX.Element {
   )
 
   return (
-    <aside className="relative w-64 h-full flex flex-col justify-end">
+    <aside className="relative w-64 h-full hidden lg:flex flex-col justify-end">
       <nav className="flex flex-col items-start gap-4 w-full h-5/6 text-2xl">
         <Link href="/">
           <a
