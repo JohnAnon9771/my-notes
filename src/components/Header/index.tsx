@@ -1,10 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import {Github} from 'assets/icons'
-
-import Sound from './Sound'
-
 export default function Header(): JSX.Element {
   return (
     <header className="p-5 flex justify-between items-center md:p-3">
@@ -20,16 +16,22 @@ export default function Header(): JSX.Element {
           <h2 className="text-lg font-black">My Notes</h2>
         </a>
       </Link>
-      <div className="flex items-center justify-center gap-2">
-        <p className="font-bold text-sm text-gray-300 uppercase tracking-widest">
-          JohnAnon9771
-        </p>
-        <img
-          className="rounded-full w-7 h-7 object-cover "
-          src="/images/profile.jpg"
-          alt="profile"
-        />
-      </div>
+      <a
+        href="https://github.com/johnanon9771"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div className="flex items-center justify-center gap-2">
+          <p className="font-bold text-sm text-gray-300 uppercase tracking-widest">
+            JohnAnon9771
+          </p>
+          <img
+            className="rounded-full w-7 h-7 object-cover "
+            src="/images/profile.jpg"
+            alt="profile"
+          />
+        </div>
+      </a>
     </header>
   )
 }
