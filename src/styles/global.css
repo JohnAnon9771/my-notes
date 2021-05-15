@@ -3,7 +3,7 @@
 
 @layer components {
   .navigation-item {
-    @apply flex gap-2 pl-6 py-4 pr-14 text-xl font-extrabold rounded-tr-full rounded-br-full;
+    @apply flex items-center gap-2 pl-6 py-4 pr-14 text-xl font-extrabold rounded-tr-full rounded-br-full;
   }
 
   .dropdown-item {
