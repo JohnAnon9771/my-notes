@@ -1,39 +1,55 @@
 import Link from 'next/link'
 import {useRouter} from 'next/router'
 
+import {SVGProps} from 'react'
+
 import {Setting, Time} from 'assets/icons'
 
 import Select from './Select'
 
+interface Routes {
+  route: string
+  active: boolean
+  name: string
+  Icon: (props: SVGProps<SVGElement>) => React.ReactElement
+}
+
+const routes: Routes[] = [
+  {
+    route: '/',
+    active: false,
+    name: 'Rotina',
+    Icon: Time,
+  },
+  {
+    route: '/configuration',
+    active: false,
+    name: 'Configurações',
+    Icon: Setting,
+  },
+]
+
 export default function Aside(): JSX.Element {
   const router = useRouter()
-  const classActive = ['/', '/configuration'].map(route =>
-    route === router.route ? 'active' : ''
+  const route = routes.map(route =>
+    router.route === route.route ? {...route, active: true} : {...route}
   )
 
   return (
     <aside className="relative w-64 h-full hidden lg:flex flex-col justify-end">
       <nav className="flex flex-col items-start gap-4 w-full h-5/6 text-2xl">
-        <Link href="/">
-          <a
-            className={`navigation-item ${
-              classActive[0] ? 'active' : 'hover:bg-gray-50'
-            }`}
-          >
-            <Time viewBox="0 0 24 24" height="32" width="32" />
-            Rotina
-          </a>
-        </Link>
-        <Link href="/configuration">
-          <a
-            className={`navigation-item ${
-              classActive[1] ? 'active' : 'hover:bg-gray-50'
-            }`}
-          >
-            <Setting viewBox="0 0 24 24" height="32" width="32" />
-            Configurações
-          </a>
-        </Link>
+        {route.map(({name, route, active, Icon}) => (
+          <Link key={name} href={route}>
+            <a
+              className={`navigation-item ${
+                active ? 'active' : 'hover:bg-gray-50'
+              }`}
+            >
+              <Icon />
+              {name}
+            </a>
+          </Link>
+        ))}
       </nav>
       <Select />
     </aside>
