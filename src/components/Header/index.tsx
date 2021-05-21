@@ -25,10 +25,11 @@ export default function Header(): JSX.Element {
           <p className="font-bold text-sm text-gray-300 uppercase tracking-widest">
             JohnAnon9771
           </p>
-          <img
-            className="rounded-full w-7 h-7 object-cover "
+          <Image
+            className="rounded-full object-cover"
             src="/images/profile.jpg"
-            alt="profile"
+            width="28"
+            height="28"
           />
         </div>
       </a>
