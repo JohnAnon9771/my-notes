@@ -13,7 +13,7 @@ export default function MyApp({Component, pageProps}: AppProps): JSX.Element {
       </Head>
       <Header />
       <div
-        className="flex flex-col md:flex-row p-5 lg:p-0 leading-loose w-screen gap-8"
+        className="flex flex-col md:flex-row p-5 lg:p-0 leading-loose w-screen gap-24"
         style={{height: 'calc(100vh - 94px)'}}
       >
         <Aside />
