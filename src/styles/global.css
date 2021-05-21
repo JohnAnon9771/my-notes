@@ -7,13 +7,12 @@
   }
 
   .dropdown-item {
-    @apply hover:bg-gray-100 rounded-md p-2 font-semibold cursor-pointer;
+    @apply hover:bg-gray-100 rounded-md p-1 cursor-pointer;
+  }
+
+  .checkbox {
+    @apply appearance-none h-[14px] w-[14px] mr-2 rounded-sm checked:bg-primary border-white border-2 ring-2 transform ring-primary transition-all;
   }
 }
 
 @tailwind utilities;
-
-.active {
-  background-color: theme('colors.primary');
-  color: #fff;
-}

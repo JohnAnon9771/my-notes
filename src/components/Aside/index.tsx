@@ -42,7 +42,7 @@ export default function Aside(): JSX.Element {
           <Link key={name} href={route}>
             <a
               className={`navigation-item ${
-                active ? 'active' : 'hover:bg-gray-50'
+                active ? 'bg-primary text-white' : 'hover:bg-gray-50'
               }`}
             >
               <Icon />
