@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-import {Card} from 'components'
+import {Card, Timeline} from 'presentation/components'
 
 export default function Home(): JSX.Element {
   const [isChecked, setIsChecked] = useState(false)
@@ -24,8 +24,13 @@ export default function Home(): JSX.Element {
               escolheu.
             </p>
           </div>
-          <Card isActive />
-          <Card />
+          <div className="flex">
+            <Timeline />
+            <div className="h-full w-full flex flex-col gap-6">
+              <Card isActive />
+              <Card />
+            </div>
+          </div>
         </section>
         <article className="flex flex-col gap-4 h-full font-black max-w-md p-0 md:p-4 md:ml-28">
           <section>

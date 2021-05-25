@@ -1,9 +1,9 @@
-import 'styles/global.css'
+import 'presentation/styles/global.css'
 
 import {AppProps} from 'next/app'
 import Head from 'next/head'
 
-import {Header, Aside} from 'components'
+import {Header, Aside} from 'presentation/components'
 
 export default function MyApp({Component, pageProps}: AppProps): JSX.Element {
   return (

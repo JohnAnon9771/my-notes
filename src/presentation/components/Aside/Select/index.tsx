@@ -10,7 +10,7 @@ export default function Select(): JSX.Element {
     <div
       className="flex flex-col gap-3 absolute bottom-3 right-3 w-3/4"
       onBlur={e => {
-        if (!e.currentTarget.contains(e.relatedTarget)) {
+        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
           setIsOpen(false)
         }
       }}
