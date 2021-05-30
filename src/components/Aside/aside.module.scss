@@ -1,0 +1,41 @@
+@use '../../styles/variables';
+
+.active {
+  background-color: variables.$bg-primary;
+  color: variables.$text-white;
+}
+
+.inactive {
+  &:hover {
+    background-color: variables.$bg-gray-50;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: variables.$g-4;
+
+  width: 100%;
+  height: 83.3333%;
+
+  font-size: variables.$text-2xl;
+
+  a {
+    display: inherit;
+    align-items: center;
+    gap: variables.$g-2;
+
+    padding-left: variables.$p-6;
+    padding-right: variables.$p-14;
+    padding-top: variables.$p-3;
+    padding-bottom: variables.$p-3;
+
+    font-size: variables.$text-xl;
+    font-weight: map-get(variables.$font-weights, extrabold);
+
+    border-top-right-radius: map-get(variables.$border-radius, full);
+    border-bottom-right-radius: map-get(variables.$border-radius, full);
+  }
+}

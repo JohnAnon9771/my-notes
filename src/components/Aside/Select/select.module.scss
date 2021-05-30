@@ -1,0 +1,45 @@
+@use '../../../styles/variables';
+
+.dropdownContainer {
+  border-width: variables.$border;
+  border-radius: map-get(variables.$border-radius, xl);
+
+  font-weight: map-get(variables.$font-weights, semibold);
+
+  padding: variables.$p-3;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  z-index: 10;
+
+  .dropdownList {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$g-2;
+
+    .dropdownItem {
+      padding: variables.$p-1;
+
+      border-radius: map-get(variables.$border-radius, md);
+      cursor: pointer;
+
+      &:hover {
+        background-color: variables.$bg-gray-100;
+      }
+
+      button {
+        text-align: left;
+
+        margin-left: variables.$m-2;
+
+        height: 100%;
+        width: 100%;
+
+        font-weight: map-get(variables.$font-weights, semibold);
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
