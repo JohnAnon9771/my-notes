@@ -10,7 +10,7 @@ export default function Select(): JSX.Element {
 
   return (
     <div
-      className="flex flex-col gap-3 absolute bottom-3 right-3 w-3/4"
+      className={styles.container}
       onBlur={e => {
         if (!e.currentTarget.contains(e.relatedTarget as Node)) {
           setIsOpen(false)
@@ -29,20 +29,14 @@ export default function Select(): JSX.Element {
           </ul>
         </div>
       )}
-      <div className="flex border-2 shadow-sm rounded-xl items-center relative">
-        <span className="absolute px-2 -top-5 left-3 font-semibold text-gray-300 bg-white">
-          Idioma
-        </span>
-        <span className="py-2 px-4">{value}</span>
+      <div className={styles.select}>
+        <span className={styles.selectLabel}>Idioma</span>
+        <span className={styles.selectValue}>{value}</span>
         <button
-          className="absolute right-3 focus:outline-none"
+          className={styles.selectBtn}
           onClick={() => setIsOpen(state => !state)}
         >
-          <ChevronDown
-            className={`transform transition ease-out duration-200 ${
-              isOpen ? 'rotate-180' : 'rotate-0'
-            }`}
-          />
+          <ChevronDown className={isOpen ? styles.rotate : ''} />
         </button>
       </div>
     </div>

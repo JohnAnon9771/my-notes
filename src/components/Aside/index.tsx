@@ -37,7 +37,7 @@ export default function Aside(): JSX.Element {
   )
 
   return (
-    <aside className="relative w-64 h-full hidden lg:flex flex-col justify-end">
+    <aside className={styles.aside}>
       <nav className={styles.navigation}>
         {route.map(({name, route, active, Icon}) => (
           <Link key={name} href={route}>
