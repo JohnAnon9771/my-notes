@@ -2,6 +2,11 @@
   "name": "my-notes",
   "version": "0.1.0",
   "private": true,
+  "description": "my web application for notes",
+  "main": "index.js",
+  "repository": "https://github.com/johnanon9771/my-notes.git",
+  "author": "JohnAnon9771",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,14 +22,16 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^5.5.0",
-    "@testing-library/react": "^11.2.7",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.6.1",
     "@types/react": "^17.0.8",
     "@types/react-dom": "^17.0.5",
     "autoprefixer": "^10.2.6",
     "eslint-config-johnanon": "^1.1.6",
-    "jest": "^27.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.5",
     "postcss": "^8.3.0",
     "tailwindcss": "^2.1.2"
   }
