@@ -1,0 +1,11 @@
+@use 'sass:map';
+
+@use 'variables';
+
+@function radius($radius-width) {
+  @return map.get(variables.$border-radius, $radius-width);
+}
+
+@function weight($font-weight) {
+  @return map.get(variables.$font-weights, $font-weight);
+}

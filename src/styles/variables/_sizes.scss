@@ -1,0 +1,44 @@
+// border
+$border-radius: (
+  'sm': 0.125rem,
+  'default': 0.25rem,
+  'md': 0.375rem,
+  'lg': 0.5rem,
+  'xl': 0.75rem,
+  '2xl': 1rem,
+  '3xl': 1.5rem,
+  'full': 9999px,
+);
+
+$border: 1px;
+$border-2: 2px;
+$border-4: 4px;
+$border-8: 8px;
+
+// paddings - last_p + 0.25rem
+$p-1: 0.25rem;
+$p-2: 0.5rem;
+$p-3: 0.75rem;
+$p-4: 1rem;
+$p-5: 1.25rem;
+$p-6: 1.5rem;
+$p-7: 1.75rem;
+$p-8: 2rem;
+$p-9: 2.25rem;
+$p-10: 2.5rem;
+$p-11: 2.75rem;
+$p-12: 3rem;
+$p-13: 3.25rem;
+$p-14: 3.5rem;
+
+// margins - last_m + 0.25rem
+$m-1: 0.25rem;
+$m-2: 0.5rem;
+$m-3: 0.75rem;
+$m-4: 1rem;
+
+// gaps - last_g + 0.25rem
+$g-1: 0.25rem;
+$g-2: 0.5rem;
+$g-3: 0.75rem;
+$g-4: 1rem;
