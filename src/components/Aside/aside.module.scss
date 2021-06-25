@@ -1,4 +1,6 @@
 @use '../../styles/variables';
+@use '../../styles/functions';
+@use '../../styles/breakpoints';
 
 .active {
   background-color: variables.$bg-primary;
@@ -8,6 +10,21 @@
 .inactive {
   &:hover {
     background-color: variables.$bg-gray-50;
+  }
+}
+
+.aside {
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 16rem;
+  height: 100%;
+
+  display: none;
+
+  @include breakpoints.media-lg {
+    display: flex;
   }
 }
 
@@ -33,9 +50,9 @@
     padding-bottom: variables.$p-3;
 
     font-size: variables.$text-xl;
-    font-weight: map-get(variables.$font-weights, extrabold);
+    font-weight: functions.weight(extrabold);
 
-    border-top-right-radius: map-get(variables.$border-radius, full);
-    border-bottom-right-radius: map-get(variables.$border-radius, full);
+    border-top-right-radius: functions.radius(full);
+    border-bottom-right-radius: functions.radius(full);
   }
 }

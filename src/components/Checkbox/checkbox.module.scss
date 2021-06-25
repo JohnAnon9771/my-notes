@@ -1,0 +1,32 @@
+@use '../../styles/variables';
+@use '../../styles/functions';
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-weight: functions.weight(semibold);
+
+  user-select: none;
+
+  .checkboxInput {
+    appearance: none;
+
+    height: 14px;
+    width: 14px;
+
+    margin-right: variables.$m-2;
+
+    border-radius: functions.radius(sm);
+    border-width: variables.$border-2;
+    border-color: white;
+
+    transition: all 200ms ease-in-out;
+
+    box-shadow: 0 0 0 1px variables.$bg-primary, 0 0 0 1px variables.$bg-primary,
+      0 0 0 1px variables.$bg-primary, 0 0 0 1px variables.$bg-primary;
+
+    &:checked {
+      background-color: variables.$bg-primary;
+    }
+  }
+}
