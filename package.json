@@ -29,10 +29,14 @@
     "@types/react": "^17.0.8",
     "@types/react-dom": "^17.0.5",
     "autoprefixer": "^10.2.6",
+    "babel-jest": "^27.0.5",
     "eslint-config-johnanon": "^1.1.6",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.5",
     "postcss": "^8.3.0",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.1.2",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
   }
 }
