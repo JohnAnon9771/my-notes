@@ -1,43 +1,46 @@
 {
-  "name": "my-notes",
-  "version": "0.1.0",
-  "private": true,
-  "description": "my web application for notes",
-  "main": "index.js",
-  "repository": "https://github.com/johnanon9771/my-notes.git",
-  "author": "JohnAnon9771",
-  "license": "MIT",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "test": "jest"
-  },
-  "dependencies": {
-    "axios": "^0.21.1",
-    "next": "^10.2.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "sass": "^1.34.0"
-  },
-  "devDependencies": {
-    "@svgr/webpack": "^5.5.0",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.1.9",
-    "@types/jest": "^26.0.23",
-    "@types/node": "^15.6.1",
-    "@types/react": "^17.0.8",
-    "@types/react-dom": "^17.0.5",
-    "autoprefixer": "^10.2.6",
-    "babel-jest": "^27.0.5",
-    "eslint-config-johnanon": "^1.1.6",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.0.5",
-    "postcss": "^8.3.0",
-    "tailwindcss": "^2.1.2",
-    "ts-jest": "^27.0.3",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.3.4"
-  }
+	"name": "my-notes",
+	"version": "0.1.0",
+	"private": true,
+	"description": "my web application for notes",
+	"main": "index.js",
+	"repository": "https://github.com/johnanon9771/my-notes.git",
+	"author": "JohnAnon9771",
+	"license": "MIT",
+	"scripts": {
+		"lint": "eslint src **/*.{ts,tsx} --fix",
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"test": "jest"
+	},
+	"dependencies": {
+		"axios": "^0.21.1",
+		"next": "^10.2.3",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"sass": "^1.34.0"
+	},
+	"devDependencies": {
+		"@svgr/webpack": "^5.5.0",
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^12.0.0",
+		"@testing-library/user-event": "^13.1.9",
+		"@types/jest": "^26.0.23",
+		"@types/node": "^15.6.1",
+		"@types/react": "^17.0.8",
+		"@types/react-dom": "^17.0.5",
+		"autoprefixer": "^10.2.6",
+		"babel-jest": "^27.0.5",
+		"eslint-config-johnanon": "^1.1.6",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^27.0.5",
+		"postcss": "^8.3.0",
+		"tailwindcss": "^2.1.2",
+		"ts-jest": "^27.0.3",
+		"ts-node": "^10.0.0",
+		"typescript": "^4.3.4"
+	}
 }
+
+
