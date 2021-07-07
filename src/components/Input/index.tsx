@@ -27,7 +27,6 @@ export default function Input({type, name, id, label}: Props): JSX.Element {
     <div>
       <label htmlFor={id}>{label}</label>
       <input
-        data-testid="input-field"
         type={type}
         name={name}
         id={id}
