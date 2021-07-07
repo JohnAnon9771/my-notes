@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-import {isValidEmail} from 'utils'
+import {isValidInput} from 'utils'
 
 interface Props {
   type:
@@ -34,9 +34,9 @@ export default function Input({type, name, id, label}: Props): JSX.Element {
         value={value}
         onChange={e => setValue(e.target.value)}
       />
-      {type === 'email' && !isValidEmail(value) && (
-        <span data-testid="input-error">Valor inválido</span>
-      )}
+      <span hidden={isValidInput(value, type)} data-testid="input-error">
+        {label} inválido
+      </span>
     </div>
   )
 }
