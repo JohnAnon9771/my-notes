@@ -22,20 +22,13 @@ describe('InputComponent', () => {
 
   it('should show an error with email incorrect', () => {
     userEvent.type(screen.getByTestId('input-field'), 'ndasdas2.com')
-    expect(screen.getByTestId('input-error')).toBeTruthy()
+    expect(screen.getByTestId('input-error').hidden).toBeFalsy()
   })
 
   it('should not show an error with email correct', () => {
     const email = 'anything@gmail.com'
     userEvent.type(screen.getByTestId('input-field'), email)
 
-    expect(
-      screen.getByText((content, element) => {
-        return (
-          element.tagName.toLowerCase() === 'span' &&
-          content === 'Valor inválido'
-        )
-      })
-    ).toBeFalsy()
+    expect(screen.getByTestId('input-error').hidden).toBeTruthy()
   })
 })
